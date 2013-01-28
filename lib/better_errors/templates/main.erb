@@ -678,7 +678,7 @@
     <div class='top'>
         <header class="exception">
             <h2><strong><%= exception.class %></strong> <span>at <%= request_path %></span></h2>
-            <p><%= exception_message %></p>
+            <p><a href="http://stackoverflow.com/search?q=#{exception_message}"><%= exception_message %></a> </p>
         </header>
     </div>
 
