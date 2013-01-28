@@ -170,7 +170,8 @@
     }
 
     header.exception:hover h2,
-    header.exception:hover p {
+    header.exception:hover p,
+    header.exception:hover p a {
         padding-right: 20px;
         overflow-y: auto;
         word-wrap: break-word;
@@ -205,6 +206,11 @@
     }
     header.exception p {
         color: #744;
+    }
+    
+    header.exception p a {
+        color: #fff;
+        text-decoration: none;
     }
     %>
 
@@ -678,7 +684,7 @@
     <div class='top'>
         <header class="exception">
             <h2><strong><%= exception.class %></strong> <span>at <%= request_path %></span></h2>
-            <p><a href="http://stackoverflow.com/search?q=#{exception_message}"><%= exception_message %></a> </p>
+            <p><a href="http://stackoverflow.com/search?q=<%= exception_message %>" title="Let stackoverflow solve this"><%= exception_message %></a> </p>
         </header>
     </div>
 
